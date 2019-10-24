@@ -1,0 +1,21 @@
+# ;;;;;;;;;;;;;;x
+
+destroy_local_wonder;Destoy Local Wonder;;;;;;;;;;;;;x
+destroy_local_wonder_desc;These are just the ruins of old, I shall create a greater legacy than this!;;;;;;;;;;;;;x
+
+
+
+destroy_wonder_rule_name;Destroy wonder cost;;;;;;;;;;;;;x
+destroy_wonder_rule_group_name;Destroy wonder;;;;;;;;;;;;;x
+
+destroy_wonder_rule_cost_none_text;No ¤ Cost;;;;;;;;;;;;;x
+destroy_wonder_rule_cost_none_desc;Destroying the wonder costs ¤0;;;;;;;;;;;;;x
+
+destroy_wonder_rule_cost_low_text;Low ¤ Cost;;;;;;;;;;;;;x
+destroy_wonder_rule_cost_low_desc;Destroying the wonder costs ¤250;;;;;;;;;;;;;x
+
+destroy_wonder_rule_cost_med_text;High ¤ Cost;;;;;;;;;;;;;x
+destroy_wonder_rule_cost_med_desc;Destroying the wonder costs ¤500;;;;;;;;;;;;;x
+
+destroy_wonder_rule_cost_return_text;Return Some ¤;;;;;;;;;;;;;x
+destroy_wonder_rule_cost_return_desc;Destroying the wonder gives the owner ¤250;;;;;;;;;;;;;x

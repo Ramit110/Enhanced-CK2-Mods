@@ -1,0 +1,352 @@
+### I only use caps for static scopes, I'll fix inconsistency as I find them
+
+namespace = population_events
+
+province_event = {
+    # Create population in province
+    id = population_events.1
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_variable = { which = localopop value = 250 }
+        if = {
+            limit = { NOT = { owner = { is_nomadic = yes } } }
+            trigger_switch = {
+                on_trigger = num_of_settlements
+                7 = { change_variable = { which = localopop value = 10500 } }
+                6 = { change_variable = { which = localopop value = 9000 } }
+                5 = { change_variable = { which = localopop value = 7500 } }
+                4 = { change_variable = { which = localopop value = 6000 } }
+                3 = { change_variable = { which = localopop value = 4500 } }
+                2 = { change_variable = { which = localopop value = 3000 } }
+                1 = { change_variable = { which = localopop value = 1500 } }
+                fallback = { change_variable = { which = localopop value = 1500 } }
+            }
+        }
+        
+        if = {
+            limit = { owner = { is_tribal = yes } }
+            divide_variable = { which = localopop value = 2 }
+        }
+        
+        if = {
+            limit = { is_capital = yes }
+            change_variable = { which = localopop value = 2500 }
+        }
+
+        ########################################################################
+        ### Testing reasons only
+        # set_variable = { which = localArmyPop value = 0 }
+        # any_province_holding = {
+        #     export_to_variable = { which = localArmyPop value = holding_raisable_levy }
+        #     ROOT = {
+        #         change_variable = { which = localArmyPop which = PREV }
+        #     }
+        # }
+        ########################################################################
+
+        set_flag = population_init
+    }
+}
+
+province_event = {
+    # Assign population modifier to the province on a yearly tick, 
+    # calls natural pop increase first
+    id = population_events.2
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+        ########################################################################
+        ### Grow Population
+        ########################################################################
+        
+        if = {
+            limit = { is_capital = yes }
+
+            set_variable = { which = temp_popRedValue value = 1.015 }
+
+        }
+        else = { set_variable = { which = temp_popRedValue value = 1.01 } }
+ 
+        if{
+            limit = { terrain = mountain }
+
+            random_list = {
+                3 = { bad_harvests = yes }
+                7 = { }
+            }
+        }
+        else_if = {
+            limit = { terrain = farmlands }
+
+            random_list = {
+                1 = { bad_harvests = yes }
+                6 = { }
+                3 = { good_harvests = yes }
+            }
+
+        }
+        else_if = {
+            limit = {
+                Or = {
+                    terrain = plains
+                    terrain = hills
+                    terrain = jungle
+                    terrain = forest
+                }
+            }
+
+            random_list = {
+                1 = { bad_harvests = yes }
+                8 = { }
+                1 = { good_harvests = yes }
+            }
+        }
+        else_if = {
+            limit = {
+                Or = {
+                    # terrain = steppe  # nothing here (always 1%)
+                    terrain = arctic
+                    terrain = desert
+                }
+            }
+
+            random_list = {
+                5 = { bad_harvests = yes }
+                5 = { }
+            }
+        }
+
+        set_variable = { which = temp which = localopop }
+        divide_variable = { which = temp value = 1500000 }
+        subtract_variable = { which = temp_popRedValue which = temp }
+
+        multiply_variable = { which = localopop which = temp_popRedValue }
+        ########################################################################
+
+        ########################################################################
+        ### Remove non-integer pops
+        ### Get realm stats from liege
+        ########################################################################
+        remove_excess_pops = yes
+        get_realm_stats = yes
+        ########################################################################
+
+        ########################################################################
+        ### Culture Conversion (merge with Religion Conversion to improve performance?)
+        ########################################################################
+        if = {
+            limit = { NOT = { owner = { culture = ROOT } } }
+
+            if = {
+                limit = {
+                    owner = {
+                        ROOT = {
+                            persistent_event_target:converting_culture =  {
+                                culture = PREVPREV
+                            }
+                        }
+                    }
+                }
+
+                set_variable = { which = temp which = total_stewardship }
+                multiply_variable = { which = temp value = 0.1 }
+
+                if = {
+                    limit = {
+                        any_neighbor_province = {
+                            ROOT = {
+                                persistent_event_target:converting_culture =  {
+                                    culture = PREVPREV
+                                }
+                            }
+                        }
+                    }
+                    multiply_variable = { which = temp value = 2 }
+                }
+                
+                change_variable = { which = culture_conversion which = temp }
+
+                if = {
+                    limit = {  check_variable = { which = culture_conversion value = 100 } }
+
+                    culture = persistent_event_target:converting_culture
+                    set_variable = { which = culture_conversion value = 0 }
+                    province_event = { id = population_events.6 }
+                }
+            }
+            else = {
+                set_variable = { which = culture_conversion value = 0 }
+                owner = {
+                    culture_scope = {
+                        ROOT = {
+                            save_persistent_event_target = {
+                                name = converting_culture
+                                scope = PREV
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            set_variable = { which = culture_conversion value = 0 }
+        }
+        ########################################################################
+
+        ########################################################################
+        ### Religion Conversion
+        ########################################################################
+        if = {
+            limit = { NOT = { owner = { religion = ROOT } } }
+
+            if = {
+                limit = {
+                    owner = {
+                        ROOT = {
+                            persistent_event_target:converting_religion =  {
+                                religion = PREVPREV
+                            }
+                        }
+                    }
+                }
+
+                set_variable = { which = temp which = total_learning }
+                multiply_variable = { which = temp value = 0.1 }
+
+                if = {
+                    limit = {
+                        any_neighbor_province = {
+                            ROOT = {
+                                persistent_event_target:converting_religion =  {
+                                    religion = PREVPREV
+                                }
+                            }
+                        }
+                    }
+
+                    multiply_variable = { which = temp value = 2 }
+                }
+
+                change_variable = { which = religion_conversion which = temp }
+
+                if = {
+                    limit = { check_variable = { which = religion_conversion value = 100 } }
+
+                    religion = persistent_event_target:converting_religion
+                    set_variable = { which = religion_conversion value = 0 }
+                    province_event = { id = population_events.5 }
+                }
+            }
+            else = {
+                set_variable = { which = religion_conversion value = 0 }
+                owner = {
+                    religion_scope = {
+                        ROOT = {
+                            save_persistent_event_target = {
+                                name = converting_religion
+                                scope = PREV
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            set_variable = { which = religion_conversion value = 0 }
+        }
+        ########################################################################
+
+        ########################################################################
+        ### Remove province modifiers then add new ones
+        ########################################################################
+        remove_all_province_mods = yes
+        ########################################################################
+    }
+}
+
+character_event = {
+    # Census event, mostly done in the census csv boi
+    id = population_events.3
+    title = population_events.3.title
+    desc = population_events.3.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_events.3.A
+    }
+}
+
+character_event = {
+    # Create population in province if needed, then 
+    id = population_events.4
+
+    only_playable = yes
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        any_demesne_province = {
+            if = {
+                limit = { NOT = { has_flag = population_init } }
+                province_event = { id = population_events.1 }
+            }
+            province_event = { id = population_events.2 }
+        }
+    }
+}
+
+province_event = {
+    # Religion changed!
+    id = population_events.5
+    desc = population_events.5.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_events.amazing
+    }
+}
+
+province_event = {
+    # Culture changed!
+    id = population_events.6
+    desc = population_events.6.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_events.amazing
+    }
+}
+
+province_event = {
+    # Failed Harvests
+    id = population_events.7
+    desc = population_events.7.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_events.dammit
+    }
+}
+
+province_event = {
+    # Great harvests
+    id = population_events.8
+    desc = population_events.8.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_events.amazing
+    }
+}

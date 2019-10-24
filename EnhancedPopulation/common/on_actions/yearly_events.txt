@@ -1,0 +1,6 @@
+
+on_yearly_pulse = {
+    events = {
+        population_events.4
+    }
+}

@@ -1,0 +1,75 @@
+population_one = {
+    icon = 50
+    tax_income = 0.12
+    local_build_cost_modifier = -0.001
+    local_build_time_modifier = -0.001
+}
+
+population_two = {
+    icon = 50
+    tax_income = 0.25
+    local_build_cost_modifier = -0.003
+    local_build_time_modifier = -0.003
+}
+
+population_three = {
+    icon = 50
+    tax_income = 0.38
+    local_build_cost_modifier = -0.005
+    local_build_time_modifier = -0.005
+}
+
+population_four = {
+    icon = 50
+    tax_income = 0.55
+    local_build_cost_modifier = -0.007
+    local_build_time_modifier = -0.007
+}
+
+population_five = {
+    icon = 50
+    local_revolt_risk = 0.0011
+    tax_income = 0.64
+    local_build_cost_modifier = -0.009
+    local_build_time_modifier = -0.009
+}
+
+population_six = {
+    icon = 50
+    local_revolt_risk = 0.0019
+    tax_income = 0.77
+    local_build_cost_modifier = -0.011
+    local_build_time_modifier = -0.011
+}
+
+population_seven = {
+    icon = 50
+    local_revolt_risk = 0.003
+    tax_income = 0.9
+    local_build_cost_modifier = -0.013
+    local_build_time_modifier = 0.013
+}
+
+population_eight = {
+    icon = 50
+    local_revolt_risk = 0.0049
+    tax_income = 1.03
+    local_build_cost_modifier = -0.015
+    local_build_time_modifier = -0.015
+}
+
+population_nine = {
+    icon = 50
+    local_revolt_risk = 0.0079
+    tax_income = 1.16
+    local_build_cost_modifier = -0.017
+    local_build_time_modifier = -0.017
+}
+
+population_ten = {
+    icon = 50
+    local_revolt_risk = 0.0128
+    tax_income = 1.29
+    local_build_cost_modifier = -0.019
+    local_build_time_modifier = -0.019
+}

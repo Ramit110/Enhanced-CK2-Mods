@@ -1,0 +1,10 @@
+population_events.amazing;Amazing!;;;;;;;;;;;;;x
+population_events.dammit;Dammit!;;;;;;;;;;;;;x
+
+population_events.5.desc;Due to the work of you and your most diligent [Root.Religion.GetPriestTitle]'s the 'citizens' of [Root.GetName] have become [Root.Religion.GetName]!;;;;;;;;;;;;;x
+
+population_events.6.desc;Due to the work of you and your administrators the 'citizens' of [Root.GetName] have become [Root.Culture.GetName]!;;;;;;;;;;;;;x
+
+population_events.7.desc;My lord, terrible news! [Root.GetName] has had a horrible harvest this year and though not many people will starve the size of our province will surely be harmed!;;;;;;;;;;;;;x
+
+population_events.8.desc;Great news! [Root.GetName] has had a great harvest this year and people from far and wide in your realm have come to enjoy the grand event!;;;;;;;;;;;;;x

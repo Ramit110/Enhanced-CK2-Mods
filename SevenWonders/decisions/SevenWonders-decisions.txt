@@ -1,0 +1,32 @@
+decisions = {
+    start_building = {
+        icon_religion = hellenic_pagan
+        only_playable = yes
+        is_high_prio = yes
+
+        potential = {
+            NOT = { has_global_flag = SevenWondersEnabled }
+            OR = {
+                religion = hellenic_pagan
+                religion = hellenic_pagan_reformed
+            }
+        }
+
+        allow = {
+            learning = 10
+            wealth = 100
+            any_realm_title = {
+                title = c_alexandria
+            }
+        }
+
+        effect = {
+            wealth = -100
+            set_global_flag = SevenWondersEnabled
+        }
+
+        ai_will_do = {
+            factor = 0.5
+        }
+    }
+}

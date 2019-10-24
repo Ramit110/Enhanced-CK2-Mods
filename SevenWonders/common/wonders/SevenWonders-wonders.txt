@@ -1,0 +1,485 @@
+# Already in game:
+## Mausoleum of Halicarnassus
+## Lighthouse of Alexandria
+## Pyramid of Giza
+
+# Wonders added
+## Hanging Gardens of Babylon
+## Temple of Artemis
+## Statue of Zeus
+## Colossus of Rhodes
+
+wonder_hanging_gardens_babylon = {
+    picture = GFX_wonder_strip_gardens
+    allow_construction = yes
+    potential = {
+        general_potential_wonders = yes
+        NOT = { any_wonder = { has_flag = babylon } }
+    }
+    active = {
+    }
+    flags = {
+		inspires_relaxing
+		cost_low
+		Babylon
+    }
+    available_upgrades = {
+		upgrade_fountains
+		upgrade_fountain_of_youth
+		upgrade_hanging_gardens
+		upgrade_secluded_groves
+		upgrade_hidden_burial
+		upgrade_poisonous_flowers
+		upgrade_herb_garden
+        upgrade_statues_garden
+        upgrade_vineyard
+		upgrade_historical_mural
+
+		upgrade_pet_graveyard
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_tower
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 200
+        gold_cost_flat = 3500
+        restore_cost_ticking = 4
+        restore_time = 225
+        loot_time = 100
+        restore_cost_flat = 300
+        gold_cost_ticking = 4
+        upgrade_slots = 2
+        local_modifier = {
+            disease_defence = 0.02
+            global_tax_modifier = 0.025
+        }
+        owner_modifier = {
+            monthly_character_prestige = 0.25
+        }
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 175
+        gold_cost_flat = 4200
+        restore_cost_ticking = 5
+        restore_time = 225
+        loot_time = 100
+        restore_cost_flat = 200
+        gold_cost_ticking = 4
+        upgrade_slots = 2
+        local_modifier = {
+            disease_defence = 0.025
+            global_tax_modifier = 0.05
+        }
+        owner_modifier = {
+            monthly_character_prestige = 0.2
+        }
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 215
+        gold_cost_flat = 4200
+        restore_cost_ticking = 5
+        restore_time = 225
+        loot_time = 100
+        restore_cost_flat = 200
+        gold_cost_ticking = 4
+        upgrade_slots = 2
+        local_modifier = {
+            disease_defence = 0.025
+            global_tax_modifier = 0.05
+        }
+        owner_modifier = {
+            monthly_character_prestige = 0.2
+        }
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 250
+        gold_cost_flat = 4400
+        restore_cost_ticking = 6
+        restore_time = 300
+        loot_time = 150
+        restore_cost_flat = 250
+        gold_cost_ticking = 4
+        upgrade_slots = 3
+        local_modifier = {
+            disease_defence = 0.025
+            global_tax_modifier = 0.075
+        }
+        owner_modifier = {
+            monthly_character_prestige = 0.2
+        }
+    }
+}
+
+wonder_temple_artemis = {
+    picture = GFX_wonder_strip_temple
+    model = wonder_temple
+    allow_construction = yes
+    potential = {
+        general_potential_wonders = yes
+        NOT = { any_wonder = { has_flag = artemis } }
+    }
+    active = {
+    }
+    flags = {
+        holy_building
+		inspires_piety
+		cost_low
+		artemis
+    }
+    available_upgrades = {
+		# UNIQUE:
+		upgrade_statue_god
+		upgrade_temple_guards
+		upgrade_sacrificial_altar
+		upgrade_sacred_grove
+		upgrade_prophecy_rooms
+		upgrade_temple_precinct
+		upgrade_inner_sanctuary
+		upgrade_custodian_of_temple
+
+		# OTHER:
+	 	upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 250
+        gold_cost_flat = 3700
+        restore_cost_ticking = 4.5
+        restore_time = 125
+        loot_time = 130
+        restore_cost_flat = 340
+        gold_cost_ticking = 3.5
+        upgrade_slots = 2
+        local_modifier = {
+            local_revolt_risk = -0.0025
+            global_revolt_risk = -0.0025
+        }
+        owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+        }
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 235
+        gold_cost_flat = 3900
+        restore_cost_ticking = 5
+        restore_time = 125
+        loot_time = 135
+        restore_cost_flat = 350
+        gold_cost_ticking = 3.5
+        upgrade_slots = 2
+        local_modifier = {
+            local_revolt_risk = -0.0025
+            global_revolt_risk = -0.0025
+        }
+        owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+        }
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 250
+        gold_cost_flat = 3900
+        restore_cost_ticking = 5
+        restore_time = 125
+        loot_time = 135
+        restore_cost_flat = 350
+        gold_cost_ticking = 3.5
+        upgrade_slots = 2
+        local_modifier = {
+            local_revolt_risk = -0.0025
+            global_revolt_risk = -0.0025
+        }
+        owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+        }
+    }
+    stage = {
+        allow = {
+        }
+        build_time = 300
+        gold_cost_flat = 4250
+        restore_cost_ticking = 6
+        restore_time = 125
+        loot_time = 135
+        restore_cost_flat = 350
+        gold_cost_ticking = 3.5
+        upgrade_slots = 2
+        local_modifier = {
+            local_revolt_risk = -0.0025
+            global_revolt_risk = -0.0025
+        }
+        owner_modifier = {
+			monthly_character_prestige = 0.1
+			monthly_character_piety = 0.1
+        }
+    }
+}
+
+wonder_statue_zeus = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_ruler_statue
+	model = wonder_statue
+	potential = {
+        general_potential_wonders = yes
+        NOT = { any_wonder = { has_flag = zeus } }
+	}
+	active = {
+	}
+	flags = {
+		statue
+		inspires_greatness
+		is_destructible
+		cost_low
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_plating_bronze
+		upgrade_plating_silver
+		upgrade_plating_gold
+		upgrade_statues_family
+		upgrade_watcher_of_giants
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_golden_crown
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 2250
+		gold_cost_ticking = 4.5
+		restore_time = 420
+		loot_time = 210
+		restore_cost_flat = 420
+		restore_cost_ticking = 4.2
+		upgrade_slots = 2
+		local_modifier = {
+			local_build_time_modifier = 0.05
+		}
+		owner_modifier = {
+            land_morale = 0.025
+            land_organisation = 0.05
+            command_modifier = {
+                defence = 0.05
+            }
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 220
+		gold_cost_flat = 2400
+		gold_cost_ticking = 4.75
+		restore_time = 450
+		loot_time = 220
+		restore_cost_flat = 450
+		restore_cost_ticking = 4.8
+		upgrade_slots = 2
+		local_modifier = {
+			local_build_time_modifier = 0.05
+		}
+		owner_modifier = {
+            land_morale = 0.025
+            land_organisation = 0.05
+            command_modifier = {
+                defence = 0.05
+            }
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 220
+		gold_cost_flat = 2400
+		gold_cost_ticking = 4.75
+		restore_time = 450
+		loot_time = 220
+		restore_cost_flat = 450
+		restore_cost_ticking = 4.8
+		upgrade_slots = 2
+		local_modifier = {
+			local_build_time_modifier = 0.05
+		}
+		owner_modifier = {
+            land_morale = 0.025
+            land_organisation = 0.05
+            command_modifier = {
+                defence = 0.05
+            }
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 260
+		gold_cost_flat = 2800
+		gold_cost_ticking = 6
+		restore_time = 500
+		loot_time = 280
+		restore_cost_flat = 470
+		restore_cost_ticking = 5
+		upgrade_slots = 2
+		local_modifier = {
+			local_build_time_modifier = 0.1
+		}
+		owner_modifier = {
+            land_morale = 0.0.5
+            land_organisation = 0.1
+            command_modifier = {
+                defence = 0.1
+            }
+		}
+	}
+}
+
+wonder_statue_colossus = {
+	allow_coastal = yes
+	picture = GFX_wonder_strip_ruler_statue
+	model = wonder_statue
+	potential = {
+        general_potential_wonders = yes
+        NOT = { any_wonder = { has_flag = rhodes } }
+	}
+	active = {
+	}
+	flags = {
+		statue
+		inspires_greatness
+		is_destructible
+		cost_low
+		rhodes
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_plating_bronze
+		upgrade_plating_silver
+		upgrade_plating_gold
+		upgrade_statues_family
+		upgrade_watcher_of_giants
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_golden_crown
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 150
+		gold_cost_flat = 2500
+		gold_cost_ticking = 5.5
+		restore_time = 450
+		loot_time = 150
+		restore_cost_flat = 400
+		restore_cost_ticking = 4.2
+		upgrade_slots = 2
+		local_modifier = {
+            local_tax_modifier = 0.05
+            local_build_cost_modifier = 0.05
+		}
+		owner_modifier = {
+            stewardship = 1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 175
+		gold_cost_flat = 2700
+		gold_cost_ticking = 6
+		restore_time = 475
+		loot_time = 150
+		restore_cost_flat = 450
+		restore_cost_ticking = 5
+		upgrade_slots = 2
+		local_modifier = {
+            local_tax_modifier = 0.05
+            local_build_cost_modifier = 0.05
+		}
+		owner_modifier = {
+            stewardship = 1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 175
+		gold_cost_flat = 2700
+		gold_cost_ticking = 6
+		restore_time = 475
+		loot_time = 150
+		restore_cost_flat = 450
+		restore_cost_ticking = 5
+		upgrade_slots = 2
+		local_modifier = {
+            local_tax_modifier = 0.05
+            local_build_cost_modifier = 0.05
+		}
+		owner_modifier = {
+            stewardship = 1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 200
+		gold_cost_flat = 3000
+		gold_cost_ticking = 6
+		restore_time = 500
+		loot_time = 200
+		restore_cost_flat = 450
+		restore_cost_ticking = 6
+		upgrade_slots = 3
+		local_modifier = {
+            local_tax_modifier = 0.1
+            local_build_cost_modifier = 0.1
+		}
+		owner_modifier = {
+            stewardship = 1
+		}
+	}
+}

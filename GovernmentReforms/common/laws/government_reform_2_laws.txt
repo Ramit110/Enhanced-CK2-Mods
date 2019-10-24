@@ -1,0 +1,98 @@
+laws = {
+
+    ## Generics
+
+    government_reform_2_honour = {
+        group = government_reform_level_2_group
+
+        monthly_character_prestige = 1
+        culture_flex = 0.1
+
+        potential = {
+            government_reform_tier_1_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_2_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_2_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+    government_reform_2_piety = {
+        group = government_reform_level_2_group
+
+        monthly_character_piety = 1
+        religion_flex = 0.1
+
+        potential = {
+            government_reform_tier_1_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_2_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_2_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+    government_reform_2_acceptance = {
+        group = government_reform_level_2_group
+
+        culture_flex = -0.25
+        religion_flex = -0.25
+        
+        potential = {
+            government_reform_tier_1_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_2_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_2_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+    
+}

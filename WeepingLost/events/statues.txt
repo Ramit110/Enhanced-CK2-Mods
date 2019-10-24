@@ -1,0 +1,78 @@
+Namespace = WeepingAngels
+
+character_event = {
+	#Basic event information
+	id = WeepingAngels.0
+	desc = WeepingAngels.0.desc
+	border = GFX_event_normal_frame_intrigue
+	picture = GFX_evt_skulls_hf
+
+	#Fast event triggers
+	only_playable = yes
+
+ 	trigger = {
+		any_artifact = {
+			artifact_type = weeping_statue
+		}
+  	}
+
+  	mean_time_to_happen = {
+		years = 3
+  	}
+
+  	immediate = {
+    		random_courtier = {
+			limit = { age = 19 }
+			save_event_target_as = aged_beyond
+		}
+  	}
+
+	option = {
+		name = WeepingAngels.0.A
+		random_list = {
+			50 = {
+				event_target:aged_beyond = {
+					hidden_tooltip = {
+						random_list = {
+							# MY EYES THEY BURN ME INSIDE
+							10 = { set_variable = { which = new_aged value = 5 } }
+							1 = { set_variable = { which = new_aged value = 6 } }
+							1 = { set_variable = { which = new_aged value = 7 } }
+							1 = { set_variable = { which = new_aged value = 8 } }
+							1 = { set_variable = { which = new_aged value = 9 } }
+							1 = { set_variable = { which = new_aged value = 10 } }
+							1 = { set_variable = { which = new_aged value = 11 } }
+							1 = { set_variable = { which = new_aged value = 12 } }
+							1 = { set_variable = { which = new_aged value = 13 } }
+							1 = { set_variable = { which = new_aged value = 14 } }
+							1 = { set_variable = { which = new_aged value = 15 } }
+							1 = { set_variable = { which = new_aged value = 16 } }
+							1 = { set_variable = { which = new_aged value = 17 } }
+							1 = { set_variable = { which = new_aged value = 18 } }
+							17 = { set_variable = { which = new_aged value = 19 } }
+							17 = { set_variable = { which = new_aged value = 20 } }
+							18 = { set_variable = { which = new_aged value = 21 } }
+							18 = { set_variable = { which = new_aged value = 22 } }
+							18 = { set_variable = { which = new_aged value = 23 } }
+							18 = { set_variable = { which = new_aged value = 24 } }
+							180 = { set_variable = { which = new_aged value = 25 } }
+							190 = { set_variable = { which = new_aged value = 26 } }
+							190 = { set_variable = { which = new_aged value = 27 } }
+							190 = { set_variable = { which = new_aged value = 28 } }
+							190 = { set_variable = { which = new_aged value = 29 } }
+							190 = { set_variable = { which = new_aged value = 30 } }
+						}
+						add_age = new_aged
+					}
+					custom_tooltip = { name = WeepingAngels.0.rnd }
+					add_trait = lunatic
+				}
+			}
+			50 = {
+				event_target:aged_beyond = {
+					leave_court_and_die_effect = yes
+				}
+			}
+		}
+	}
+}

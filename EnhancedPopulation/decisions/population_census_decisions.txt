@@ -1,0 +1,31 @@
+settlement_decisions = {
+    take_census = {
+        from_potential = {
+            ai = no
+        }
+
+        potential = {
+            location = {
+                has_flag = population_init
+            }
+            holder_scope = {
+                Or = {
+                    character = FROM
+                    any_liege = { character = FROM }
+                }
+            }
+        }
+
+        effect = { FROM = { character_event = { id = population_events.3 } } }
+    }
+}
+
+decisions = {
+    mod_menu = {
+        ai = no
+
+        effect = {
+            narrative_event = { id = population_manual.1 }
+        }
+    }
+}

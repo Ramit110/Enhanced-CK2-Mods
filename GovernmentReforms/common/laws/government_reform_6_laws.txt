@@ -1,0 +1,67 @@
+laws = {
+
+    ## Generics
+
+    government_reform_6_holy_warriors = {
+        group = government_reform_level_6_group
+
+        land_morale = 0.25
+        infidel_opinion = -30
+
+        potential = {
+            government_reform_tier_5_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_6_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_6_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+    government_reform_6_builders_and_architects = {
+        group = government_reform_level_6_group
+
+        build_cost_modifier = -0.2
+        build_time_modifier = -0.25
+
+        potential = {
+            government_reform_tier_5_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_6_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_6_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+}

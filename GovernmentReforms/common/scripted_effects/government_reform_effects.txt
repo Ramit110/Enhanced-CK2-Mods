@@ -1,0 +1,47 @@
+revoke_other_tier_0_reforms = {
+    custom_tooltip = { name = already_has_generic_government_reform }
+}
+
+revoke_other_tier_1_reforms = {
+    revoke_other_tier_0_reforms = yes
+
+    revoke_law = government_reform_1_labourers
+    revoke_law = government_reform_1_soldiers
+}
+
+revoke_other_tier_2_reforms = {
+    revoke_other_tier_0_reforms = yes
+    
+    revoke_law = government_reform_2_honour
+    revoke_law = government_reform_2_piety
+    revoke_law = government_reform_2_acceptance
+}
+
+revoke_other_tier_3_reforms = {
+    revoke_other_tier_0_reforms = yes
+    
+    revoke_law = government_reform_3_internal
+    revoke_law = government_reform_3_external
+}
+
+revoke_other_tier_4_reforms = {
+    revoke_other_tier_0_reforms = yes
+    
+    revoke_law = government_reform_4_general
+    revoke_law = government_reform_4_trading
+}
+
+revoke_other_tier_5_reforms = {
+    revoke_other_tier_0_reforms = yes
+    
+    revoke_law = government_reform_5_grand
+    revoke_law = government_reform_5_strong
+    revoke_law = government_reform_5_siege
+}
+
+revoke_other_tier_6_reforms = {
+    revoke_other_tier_0_reforms = yes
+    
+    revoke_law = 
+    revoke_law = government_reform_6_builders_and_architects
+}

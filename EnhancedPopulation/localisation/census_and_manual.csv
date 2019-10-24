@@ -1,0 +1,23 @@
+take_census;Do A Census;;;;;;;;;;;;;x
+take_census_desc;Perform a census of the province this holding is in. This will get the population.;;;;;;;;;;;;x
+
+population_events.3.title;Census Conducted in [From.Location.GetName];;;;;;;;;;;;;x
+population_events.3.desc;The Population of [From.Location.GetName] is: [From.Location.localopop.GetValue].\nIf the province is eligable to convert culture then the current progress is: [From.Location.culture_conversion.GetValue].\nIf the province is eligable convert the religion then the current progresss is: [From.Location.religion_conversion.GetValue].;;;;;;;;;;;;;x
+population_events.3.A;Excellent;;;;;;;;;;;;;x
+
+
+mod_menu;Mod Manual;;;;;;;;;;;;;x
+mod_menu_desc;Find out more about Enhanced Population and Provinces;;;;;;;;;;;;;x
+population_manual.endManual;I'll leave now;;;;;;;;;;;;;x
+population_manual.BackToMain;Go back, there's more I need to know.;;;;;;;;;;;;;x
+
+population_manual.1.title;Welcome to Enchanced Population and Provinces;;;;;;;;;;;;;x
+population_manual.1.desc;As you can see this mod is still in  a really early form.\n Currently the mod consists of two major systems, a population system for each province and a new conversion system for culture and religion.\nPlease note that the game takes about a year to initialise all the things so if things like the 'Census' events don't appear right away just let the game tick along ant they will appear soon.;;;;;;;;;;;;;x
+population_manual.1.A;Find out more about population.;;;;;;;;;;;;;x
+population_manual.1.B;Find out more about the new culture and religion mechanics.;;;;;;;;;;;;;x
+
+population_manual.2.title;Population;;;;;;;;;;;;;x
+population_manual.2.desc;Put simply, now every province has a population that is initialised within a year of starting the game with the mod enabled.\nOnce this has happened you can right click the province capital and you can open up a census.\nEvery year the population will increase by an amount in the province and every 10,000 people will upgrade the modifier applied to the province granting grander and grander modifers.\nCurrently population increases naturally over time and has a random 'failed harvests' event which causes it to grow less or decrease each year.;;;;;;;;;;;;;x
+
+population_manual.3.title;Culture and Religion;;;;;;;;;;;;;x
+population_manual.3.desc;Once a province is governed by a character with a differing culture and/or a differing religion a counter starts in the census, this counter increases by 5% of your realm's stewardship for culture and 10% of your realm's learning for religion conversion, this rate is doubled if a neighbouring province also has this culture/religion. Once the counter reaches 100 the religion or culture changes the one of the owner, this value is only reset if the owner's culutre or religion changes.;;;;;;;;;;;;;x

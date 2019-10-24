@@ -1,0 +1,64 @@
+namespace = population_manual
+
+################################################################################
+# Mod Manual 
+################################################################################
+
+narrative_event = {
+    # manual, mostly done in the census csv boi
+    id = population_manual.1
+    title = population_manual.1.title
+    desc = population_manual.1.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_manual.1.A
+        narrative_event = { id = population_manual.2 }
+    }
+
+    option = {
+        name = population_manual.1.B
+        narrative_event = { id = population_manual.3 }
+    }
+
+    option = {
+        name = population_manual.endManual
+    }
+}
+
+narrative_event = {
+    # Population
+    id = population_manual.2
+    title = population_manual.2.title
+    desc = population_manual.2.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_manual.BackToMain
+        narrative_event = { id = population_manual.1 }
+    }
+
+    option = {
+        name = population_manual.endManual
+    }
+}
+
+narrative_event = {
+    # Conversion
+    id = population_manual.3
+    title = population_manual.3.title
+    desc = population_manual.3.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = population_manual.BackToMain
+        narrative_event = { id = population_manual.1 }
+    }
+
+    option = {
+        name = population_manual.endManual
+    }
+}

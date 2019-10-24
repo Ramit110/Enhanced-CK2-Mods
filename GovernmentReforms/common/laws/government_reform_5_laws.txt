@@ -1,0 +1,99 @@
+laws = {
+
+    ## Generics
+
+    government_reform_5_grand = {
+        group = government_reform_level_5_group
+
+        levy_size = 0.4
+
+        command_modifier = {
+            light_infantry = 0.35
+        }
+
+        potential = {
+            government_reform_tier_4_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_5_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_5_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+    government_reform_5_strong = {
+        group = government_reform_level_5_group
+
+        land_morale = 0.45
+
+        potential = {
+            government_reform_tier_4_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_5_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_5_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+    government_reform_5_siege = {
+        group = government_reform_level_5_group
+
+        siege_speed = 0.25
+
+        potential = {
+            government_reform_tier_4_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_5_triggers = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+        
+        effect = {
+            revoke_other_tier_5_reforms = yes
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+}

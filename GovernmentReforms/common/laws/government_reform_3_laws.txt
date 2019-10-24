@@ -1,0 +1,67 @@
+laws = {
+
+    ## Generics
+
+    government_reform_3_internal = {
+        group = government_reform_level_3_group
+
+        vassal_opinion = 15
+        plot_power_modifier = 0.05
+
+        potential = {
+            government_reform_tier_2_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_3_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_3_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+
+    government_reform_3_external = {
+        group = government_reform_level_3_group
+
+        general_opinion = 10
+        plot_discovery_chance = 0.05
+
+        potential = {
+            government_reform_tier_2_triggers = yes
+        }
+
+        allow = {
+            government_reform_tier_3_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_3_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+    
+}

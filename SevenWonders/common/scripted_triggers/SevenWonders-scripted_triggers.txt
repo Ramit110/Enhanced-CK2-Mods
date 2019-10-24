@@ -1,0 +1,7 @@
+general_potential_wonders = {
+    has_global_flag = SevenWondersEnabled
+    OR = {
+        religion = hellenic_pagan
+        religion = hellenic_pagan_reformed
+    }
+}

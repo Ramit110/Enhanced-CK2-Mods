@@ -1,0 +1,61 @@
+government_reform_tier_1_triggers = {
+    AND = {
+        TECH_RECRUITMENT = 1
+        TECH_CONSTRUCTION = 1
+        TECH_LEGALISM = 1
+    }
+}
+
+government_reform_tier_2_triggers = {
+    AND = {
+        TECH_CITY_CONSTRUCTION = 2
+        TECH_MAJESTY = 2
+        TECH_LEGALISM = 2
+    }
+}
+
+government_reform_tier_3_triggers = {
+    AND = {
+        TECH_NOBLE_CUSTOMS = 3
+        TECH_POPULAR_CUSTOMS = 3
+        TECH_RELIGIOUS_CUSTOMS = 3
+        TECH_LEGALISM = 3
+    }
+}
+
+government_reform_tier_4_triggers = {
+    AND = {
+        TECH_RECRUITMENT = 4
+        TECH_SIEGE_EQUIPMENT = 4
+        TECH_LEGALISM = 4
+    }
+}
+
+government_reform_tier_5_triggers = {
+    AND = {
+        TECH_RECRUITMENT = 5
+        TECH_CONSTRUCTION = 5
+        TECH_LEGALISM = 5
+    }
+}
+
+government_reform_tier_6_triggers = {
+    AND = {
+        TECH_INFANTRY = 6
+        TECH_CAVALRY = 6
+        TECH_MELEE = 6
+        TECH_SIEGE_EQUIPMENT = 6
+        TECH_LEGALISM = 6
+    }
+}
+
+government_reform_tier_7_triggers = {
+    AND = {
+        TECH_SIEGE_EQUIPMENT = 7
+        TECH_RECRUITMENT = 7
+        TECH_CITY_CONSTRUCTION = 7
+        TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        TECH_RELIGIOUS_CUSTOMS = 7
+        TECH_LEGALISM = 7
+    }
+}

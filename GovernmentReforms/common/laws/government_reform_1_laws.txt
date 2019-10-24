@@ -1,0 +1,60 @@
+laws = {
+
+    ## Generics
+
+    government_reform_1_labourers = {
+        group = government_reform_level_1_group
+
+        global_tax_modifier = 0.15
+        global_levy_size = -0.15
+
+        allow = {
+            government_reform_tier_1_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_1_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+        
+    }
+
+    government_reform_1_soldiers = {
+        group = government_reform_level_1_group
+
+        global_tax_modifier = -0.15
+        global_levy_size = 0.15
+
+        allow = {
+            government_reform_tier_1_triggers = yes
+        }
+
+        effect = {
+            revoke_other_tier_1_reforms = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0.05
+        }
+
+        ai_will_revoke = {
+            factor = 0
+        }
+    }
+    
+}

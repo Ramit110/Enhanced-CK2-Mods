@@ -1,0 +1,31 @@
+law_groups = {
+    ### People
+    government_reform_level_1_group = {
+        law_type = realm
+    }
+
+    ## Legacy
+    government_reform_level_2_group = {
+        law_type = realm
+    }
+
+    ## Governments
+    government_reform_level_3_group = {
+        law_type = realm
+    }
+
+    ## Regional (capital)
+    government_reform_level_4_group = {
+        law_type = realm
+    }
+
+    ## Military
+    government_reform_level_5_group = {
+        law_type = realm
+    }
+
+    ## Religion
+    government_reform_level_6_group = {
+        law_type = realm
+    }
+}

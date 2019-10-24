@@ -1,0 +1,26 @@
+
+destroy_wonder_cost = {
+    name = destroy_wonder_rule_name
+    group = destroy_wonder_rule_group_name
+
+    option = {
+        name = destroy_wonder_rule_cost_none
+        text = destroy_wonder_rule_cost_none_text
+        desc = destroy_wonder_rule_cost_none_desc
+    }
+    option = {
+        name = destroy_wonder_rule_cost_low
+        text = destroy_wonder_rule_cost_low_text
+        desc = destroy_wonder_rule_cost_low_desc
+    }
+    option = {
+        name = destroy_wonder_rule_cost_med
+        text = destroy_wonder_rule_cost_med_text
+        desc = destroy_wonder_rule_cost_med_desc
+    }
+    option = {
+        name = destroy_wonder_rule_cost_return
+        text = destroy_wonder_rule_cost_return_text
+        desc = destroy_wonder_rule_cost_return_desc
+    }
+}

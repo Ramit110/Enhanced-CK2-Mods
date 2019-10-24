@@ -1,0 +1,116 @@
+
+bad_harvests = {
+    multiply_variable = { which = temp_popRedValue value = 0.99}
+    province_event = { id = population_events.7 }
+}
+
+good_harvests = {
+    multiply_variable = { which = temp_popRedValue value = 1.0075 }
+    province_event = { id = population_events.8 }
+}
+
+remove_excess_pops = {
+    set_variable = { which = temp which = localopop }
+    modulo_variable = { which = temp value = 1 }
+    subtract_variable = { which = localopop which = temp }
+}
+
+remove_all_province_mods = {
+    remove_province_modifier = population_one
+    remove_province_modifier = population_two
+    remove_province_modifier = population_three
+    remove_province_modifier = population_four
+    remove_province_modifier = population_five
+    remove_province_modifier = population_six
+    remove_province_modifier = population_seven
+    remove_province_modifier = population_eight
+    remove_province_modifier = population_nine
+    remove_province_modifier = population_ten
+    
+    if = {
+        limit = { NOT = { check_variable = { which = localopop value = 10000 } } }
+        add_province_modifier = { modifier = population_one duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 10000 }
+            NOT = { check_variable = { which = localopop value = 20000 } }
+        }
+        add_province_modifier = { modifier = population_two duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 20000 }
+            NOT = { check_variable = { which = localopop value = 30000 } }
+        }
+        add_province_modifier = { modifier = population_three duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 30000 }
+            NOT = { check_variable = { which = localopop value = 40000 } }
+        }
+        add_province_modifier = { modifier = population_four duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 40000 }
+            NOT = { check_variable = { which = localopop value = 50000 } }
+        }
+        add_province_modifier = { modifier = population_five duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 50000 }
+            NOT = { check_variable = { which = localopop value = 60000 } }
+        }
+        add_province_modifier = { modifier = population_six duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 60000 }
+            NOT = { check_variable = { which = localopop value = 70000 } }
+        }
+        add_province_modifier = { modifier = population_seven duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 70000 }
+            NOT = { check_variable = { which = localopop value = 80000 } }
+        }
+        add_province_modifier = { modifier = population_eight duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 80000 }
+            NOT = { check_variable = { which = localopop value = 90000 } }
+        }
+        add_province_modifier = { modifier = population_nine duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which = localopop value = 90000 }
+            # NOT = { check_variable = { which = localopop value = 100000 } }
+        }
+        add_province_modifier = { modifier = population_ten duration = -1 }
+    }
+}
+
+
+get_realm_stats = {
+    owner = {
+        export_to_variable = { which = total_diplomacy value = realm_diplomacy }
+        export_to_variable = { which = total_martial value = realm_martial }
+        export_to_variable = { which = total_stewardship value = realm_stewardship }
+        export_to_variable = { which = total_intrigue value = realm_intrigue }
+        export_to_variable = { which = total_learning value = realm_learning }
+
+        ROOT = {
+            set_variable = { which = total_diplomacy which = PREV }
+            set_variable = { which = total_martial which = PREV }
+            set_variable = { which = total_stewardship which = PREV }
+            set_variable = { which = total_intrigue which = PREV }
+            set_variable = { which = total_learning which = PREV }
+        }
+    }
+}
